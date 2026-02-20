@@ -3,15 +3,25 @@
 //  Difficulty : Easy
 //  Language   : java
 //  Date       : 2026-02-20
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━class Solution {
-    public int[] sortedSquares(int[] nums) {
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━            if(leftS > rightS){
 
-        for (int i=0 ; i<nums.length ;i++) {
-            nums[i] *= nums[i];
+            }else{
+              res[pos] =leftS;
+              left++;
+                 res[pos] = rightS;
+            }
+                 right--;
+            pos--;
+
+
+
+            int rightS = nums[right] *nums[right];
+            int leftS = nums[left] *nums[left];
+       while(left<=right){
+
+        int pos =right;
+
         }
-        Arrays.sort(nums);
+        return res;
 
     }
-
-        return nums;
-}
