@@ -19,3 +19,7 @@
         return a;
     }
 }
+        while (a != b) {
+
+        ListNode b = headB;
+        ListNode a = headA;
