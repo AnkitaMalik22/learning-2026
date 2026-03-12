@@ -2,21 +2,25 @@
 //  🟨 LeetCode — reverse-linked-list
 //  Difficulty : Easy
 //  Language   : java
-//  Date       : 2026-02-28
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━        ListNode curr = head;
+//  Date       : 2026-03-12
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode reverseList(ListNode head) {
+
+        ListNode curr = head;
+
         ListNode prev = null;
 
         while (curr != null) {
-            ListNode newNode = curr.next;
             curr.next = prev;
+        }
+    }
             prev = curr;
 
-    public ListNode reverseList(ListNode head) {
             curr = newNode;
-        }
 
         return prev;
-
-    }
+            ListNode newNode =curr.next;
 }
-class Solution {
