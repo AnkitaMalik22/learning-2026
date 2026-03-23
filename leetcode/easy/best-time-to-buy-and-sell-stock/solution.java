@@ -2,22 +2,21 @@
 //  🟨 LeetCode — best-time-to-buy-and-sell-stock
 //  Difficulty : Easy
 //  Language   : java
-//  Date       : 2026-02-20
+//  Date       : 2026-03-23
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━class Solution {
-    public int maxProfit(int[] nums) {
+    public int maxProfit(int[] prices) {
 
-        int minPrice = Integer.MAX_VALUE;
-        int maxProfit = 0;
+        int min = Integer.MAX_VALUE;
 
-}
-        for (int num : nums) {
+            min = Math.min(min, num);
 
-            if (num < minPrice) {
-                minPrice = num;
-    }
-            } else {
-                maxProfit = Math.max(maxProfit, num - minPrice);
-            }
+        int profit = 0;
+
+        for (int num : prices) {
         }
-        return maxProfit;
+        return profit;
 
+            profit = Math.max(profit, num - min);
+
+    }
+}
