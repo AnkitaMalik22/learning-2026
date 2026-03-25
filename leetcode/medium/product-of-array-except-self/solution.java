@@ -2,24 +2,23 @@
 //  🟨 LeetCode — product-of-array-except-self
 //  Difficulty : Medium
 //  Language   : java
-//  Date       : 2026-03-24
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━                res[i] = product / nums[i];
-            } else if (zeros >= 2) {
-                res[i] = 0;
+//  Date       : 2026-03-25
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━        int[] res = new int[n];
 
-            } else {
-                //==1
-
-
-            i++;
-                if (nums[i] == 0) {
-                    res[i] = product;
-                } else {
-                    res[i] = 0;
-                }
-            }
         return res;
+
+        int n = nums.length;
+
+        res[0] = 1;
+        for (int i = 1; i < n; i++) {
+            res[i] = res[i - 1] * nums[i - 1];
         }
 
+        int right = 1;
+
+        for (int i = n - 1; i >= 0; i--) {
+            res[i] = res[i] * right;
+        }
+            right *= nums[i];
     }
 }
